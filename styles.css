@@ -1,0 +1,268 @@
+.container {
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    grid-area: logo;
+    padding-top: 15%;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#logoimage{
+    
+    max-width: 75%;
+}
+
+.login{
+    padding-top: 5%;
+    grid-area: login;
+    text-align: center;
+    color: white;
+}
+
+.login h1 {
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 4px 4px black;
+}
+
+.login h2 {
+    font-size: 35px;
+}
+
+.login h3 {
+    font-size: 30px;
+}
+
+.login input {
+    width: 8em;
+    height: 2em;
+    border-radius: 10px;
+    border: 2px solid red;
+    background-color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}
+
+.loginError{
+    color:red;
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+}
+
+
+a:link{
+    color: white;
+}
+
+#submit {
+    width: 5em;
+    height: 2em;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+#signUpLink a:link {
+    color:white;
+}
+
+.footer{
+    padding-top: 8%;
+    grid-area: footer;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+.footer a:link{
+    color: white;
+}
+
+#hamburgerMenu{
+    grid-area: hamburgerMenu;
+    background-color: #4F7A33;
+    padding:10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hamburgerMenu:hover{
+    background-color: gray; 
+}
+
+#hamburgerMenuImage{
+    max-width: 80%;
+}
+
+.mobileNav {
+    height:100%;
+    width:0%;
+    position: fixed;
+    z-index:1;
+    right:0;
+    top:0;
+    background-color: black;
+    background-color:rgba(0,0,0, 0.9) ;
+    overflow-x: hidden;
+    transition:0.5s;
+}
+
+#mobileNavContent{
+    position: relative;
+    top: 25%;
+    width:100%;
+    text-align: center;
+    margin-top:30px;
+    color:white;
+    font-size: 25px;
+}
+
+#mobileNavContent a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    display: block; 
+}
+
+.mNavItem:hover {
+    background-color: gray;
+}
+
+#mobileNavClose{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+}
+
+#disclaimer{
+    font-size: 18px;
+}
+
+  
+
+/* Creating responsive layouts */
+/* Creating grid of elements - Source of information/code https://codingthesmartway.com/getting-started-with-css-grid/ & https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container{
+        display: grid;
+        gap: 20px;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 200px 1fr 20em;
+        grid-template-areas:
+        "logo hamburgerMenu"
+        "login login"
+        "footer footer";
+      }
+
+      .logo{
+        grid-area: logo;
+        width: 40%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        
+    }
+  
+  
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .container{
+            display: grid;
+            gap: 20px;
+            grid-template-columns:1fr 1fr;
+            grid-template-rows: 200px 1fr 20em;
+            grid-template-areas:
+            "logo hamburgerMenu"
+            "login login"
+            "footer footer";
+          }
+    
+          .logo{
+            grid-area: logo;
+            width: 40%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            
+        }
+      
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .container{
+        display: grid;
+        gap: 20px;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 200px 1fr 20em;
+        grid-template-areas:
+        "logo hamburgerMenu"
+        "login login"
+        "footer footer";
+      }
+
+      .logo{
+        grid-area: logo;
+        width: 40%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        
+    }
+  
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .container{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 1fr 20em;
+        grid-template-areas:
+        "logo login"
+        "footer footer";
+    }
+    #hamburgerMenu{
+        display: none;
+    }
+    .logo{
+        width: 70%;
+    }
+
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .container{
+      display: grid;
+      grid-template-columns:1fr 1fr;
+      grid-template-rows: 1fr 20em;
+      grid-template-areas:
+      "logo login"
+      "footer footer";
+    }
+    #hamburgerMenu{
+        display: none;
+    }
+    
+    .logo{
+        width: 70%;
+    }
+  }

@@ -1,0 +1,521 @@
+.container {
+    margin:-1%;
+    display: grid;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    grid-area: header;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#logo{
+    grid-area: logo;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: auto;
+    float: left;
+}
+
+#logoImage{
+    
+    max-width: 50%;
+}
+
+
+#headline{
+    grid-area:headline;
+    color: white;
+    font-size: 120px;
+}
+
+#breadcrumb{
+    grid-area:breadcrumb;
+    background-color: #3920c9;
+}
+
+#breadcrumbContent{
+    padding-left: 2%;
+    font-size: 20px;
+    color: white;
+}
+
+.desktopMenu{
+    grid-area: desktopMenu;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-areas:"menuOne menuTwo menuThree menuFour";
+    background-color: #4F7A33;
+    font-size:40px;
+    color:white;
+    text-align: center;}
+
+#menuOne{
+    grid-area: menuOne;
+    
+}
+#menuTwo{
+    grid-area: menuTwo;
+    
+}
+#menuThree{
+    grid-area: menuThree;
+    
+}
+#menuFour{
+    grid-area: menuFour;
+  
+}
+
+.menuItem{
+    background-color: #4F7A33;
+    border:2px solid white;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuItem:hover {
+    background-color: gray;
+    border: 2px solid gray;
+}
+
+.desktopMenu a:link{
+    color: white;
+}
+
+.desktopMenu a:visited{
+    color:white;
+}
+
+.hamburgerMenu{
+    grid-area: hamburgerMenu;
+    background-color: #4F7A33;
+    padding:10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburgerMenu:hover{
+    background-color: gray; 
+}
+
+#hamburgerMenuImage{
+    max-width: 65%;
+}
+
+.mobileNav {
+    height:100%;
+    width:0%;
+    position: fixed;
+    z-index:1;
+    right:0;
+    top:0;
+    background-color: black;
+    background-color:rgba(0,0,0, 0.9) ;
+    overflow-x: hidden;
+    transition:0.5s;
+}
+
+#mobileNavContent{
+    position: relative;
+    top: 25%;
+    width:100%;
+    text-align: center;
+    margin-top:30px;
+    color:white;
+    font-size: 25px;
+}
+
+#mobileNavContent a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    display: block; 
+}
+
+.mNavItem:hover {
+    background-color: gray;
+}
+
+#mobileNavClose{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+}
+
+
+#updateInfo{
+    grid-area: updateInfo;
+    margin:35px;
+    border: 4px solid #3920c9;
+}
+
+#updateInfoHeader{
+    background-color:#3920c9;
+    color:white;
+    font-size: 35px;
+    margin:-1px;
+    padding: 2%;
+}
+
+
+#updateInfoContent{
+    font-size: 12px;
+    margin:2%;
+}
+
+.updateInfoFieldset{
+    font-size: 24px;
+    font-weight: bold;
+    border: 4px solid #3920c9;
+}
+
+.signUplabels {
+    
+    font-size: 16px;
+}
+
+.signUpBoxes {
+    height: 2em;
+    border-radius: 8px;
+    border: 2px solid black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.signUpError{
+    color:red;
+    font-size:16px;
+}
+
+
+
+#currentUserImage{
+    max-width:200px;
+}
+
+
+.submitButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    width: 7em;
+    height: 3em;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+#footer{
+    grid-area:footer;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    text-align: center;
+    font-size:24px;
+}
+
+#footer a:link{
+    color: white;
+}
+
+
+#disclaimer{
+    font-size: 18px;
+}
+
+table{
+    text-align:center; 
+    border-spacing: 5px;
+    border: 2px solid black;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th {
+background-color: gray;
+padding: 10px;
+border: 2px solid black;
+color: white;
+font-size:18px;
+}
+
+td{
+    
+    padding: 10px;
+    border: 2px solid black;
+    font-size:18px; 
+    font-weight:bold;
+}
+
+.signUp{
+    grid-area:updateinformation;
+    margin:2%;
+    padding:4%;
+}
+
+#currentUserImage{
+    max-width: 150px;
+    max-height: 200px;
+}
+
+
+/* Creating responsive layouts */
+/* Creating grid of elements - Source of information/code https://codingthesmartway.com/getting-started-with-css-grid/ & https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 20em 20em 3em 1fr 10em;
+        grid-template-areas:
+        "header header"
+        "header header"
+        "breadcrumb breadcrumb"
+        "updateInfo updateInfo"
+        "footer footer";
+    }
+
+    .header{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "logo hamburgerMenu"
+        "headline headline";
+    }
+
+    #headline{
+        grid-area:headline;
+        color: white;
+        font-size: 120px;
+        text-align: center;
+    }
+    .desktopMenu{
+        display:none;
+    }
+
+    #logoImage{
+    
+        max-width: 80%;
+    }
+
+    #imageTable{
+        max-width: 50%;
+    }
+
+
+    table{
+        max-width: 50%;
+        text-align:center; 
+        border-spacing: 5px;
+        border: 2px solid black;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    
+    th {
+    background-color: gray;
+    padding: 5px;
+    border: 2px solid black;
+    color: white;
+    font-size:14px;
+    }
+    
+    td{
+        
+    padding: 5px;
+    border: 2px solid black;
+    font-size:10px; 
+    font-weight:bold;
+    }
+
+    #currentUserImage{
+        max-width: 100px;
+        max-height: 150px;
+    }
+    
+  
+    }
+
+  
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        .container {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            grid-template-rows: 20em 20em 3em 1fr 10em;
+            grid-template-areas:
+            "header header"
+            "header header"
+            "breadcrumb breadcrumb"
+            "updateInfo updateInfo"
+            "footer footer";
+        }
+
+        .header{
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+            "logo hamburgerMenu"
+            "headline headline";
+        }
+
+        #headline{
+            grid-area:headline;
+            color: white;
+            font-size: 120px;
+            text-align: center;
+        }
+
+        .desktopMenu{
+            display:none;
+        }
+
+        #logoImage{
+        
+            max-width: 80%;
+        }
+
+        
+
+        }
+  
+  
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+            .container {
+                display: grid;
+                grid-template-columns:1fr 1fr;
+                grid-template-rows: 20em 20em 3em 1fr 10em;
+                grid-template-areas:
+                "header header"
+                "header header"
+                "breadcrumb breadcrumb"
+                "updateInfo updateInfo"
+                "footer footer";
+            }
+
+            .header{
+                display: grid;
+                grid-template-columns:1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas:
+                "logo hamburgerMenu"
+                "headline headline";;
+            }
+
+            #headline{
+                grid-area:headline;
+                color: white;
+                font-size: 120px;
+                text-align: center;
+            }
+
+            .desktopMenu{
+                display:none;
+            }
+
+            #logoImage{
+            
+                max-width: 50%;
+            }
+
+            }
+  
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                .container {
+                    display: grid;
+                    grid-template-columns:1fr 1fr 1fr;
+                    grid-template-rows: 20em 7em 3em 1fr 15em;
+                    grid-template-areas:
+                    "header header header"
+                    "desktopMenu desktopMenu desktopMenu"
+                    "breadcrumb breadcrumb breadcrumb"
+                    "updateInfo updateInfo updateInfo""
+                    "footer footer footer";
+                }
+
+                .header{
+                    display: grid;
+                    grid-template-columns:1fr 1fr 1fr;
+                    grid-template-rows: 1fr;
+                    grid-template-areas:
+                    "logo headline headline";
+                }
+
+                #headline{
+                    text-align: left;
+                    padding-left:2%;
+                }
+
+                .hamburgerMenu{
+                    display:none;
+                }
+
+                .desktopMenu{
+                    display:grid;
+                }
+
+                #logoImage{
+                
+                    max-width: 50%;
+                }
+                } 
+  
+                    /* Extra large devices (large laptops and desktops, 1200px and up) */
+                    @media only screen and (min-width: 1200px) {
+                        .container {
+                            display: grid;
+                            grid-template-columns:1fr 1fr 1fr;
+                            grid-template-rows: 20em 7em 3em 1fr 15em;
+                            grid-template-areas:
+                            "header header header"
+                            "desktopMenu desktopMenu desktopMenu"
+                            "breadcrumb breadcrumb breadcrumb"
+                            "updateInfo updateInfo updateInfo"
+                            "footer footer footer";
+                        }
+
+                        .header{
+                            display: grid;
+                            grid-template-columns:1fr 1fr 1fr;
+                            grid-template-rows: 1fr;
+                            grid-template-areas:
+                            "logo headline headline";
+                        }
+
+                        #headline{
+                            text-align: left;
+                            padding-left:2%;
+                        }
+
+                        .hamburgerMenu{
+                            display:none;
+                        }
+                        .desktopMenu{
+                            display:grid;
+                        }
+                        #logoImage{
+                        
+                            max-width: 50%;
+                        }
+                        }
